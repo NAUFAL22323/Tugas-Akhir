@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Naufal</title>
+    <!-- Font modern: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- TOMBOL SELAMAT DATANG -->
+<div id="welcome-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: #0a0a0a; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 10000; transition: 0.5s;">
+    <h2 style="font-family: 'Playfair Display', serif; color: #d4af37; margin-bottom: 20px; letter-spacing: 2px;">Selamat Datang di Portofolio</h2>
+    <button onclick="hidupkanMusik()" style="padding: 12px 30px; border: 1px solid #d4af37; background: transparent; color: #d4af37; cursor: pointer; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">
+        Buka Portofolio
+    </button>
+</div>
+
+<!-- TAG AUDIO LOKAL (Memanggil file laguku.mp3 di folder yang sama) -->
+<audio id="musikWeb" src="DJ GOFAR HILMAN.MP3.mp3" loop></audio>
+
+<script>
+    function hidupkanMusik() {
+        var audio = document.getElementById('musikWeb');
+        var overlay = document.getElementById('welcome-overlay');
+        
+        // Memaksa musik berputar saat tombol ditekan
+        audio.play().catch(function(error) {
+            console.log("Audio gagal berputar karena: ", error);
+        });
+        
+        // Menghilangkan screen selamat datang
+        overlay.style.opacity = '0';
+        setTimeout(function() {
+            overlay.style.display = 'none';
+        }, 500);
+    }
+</script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+       body {
+    font-family: 'Poppins', sans-serif;
+    /* Menggunakan GIF lokal sebagai background */
+    background: linear-gradient(rgba(18, 20, 24, 0.8), rgba(18, 20, 24, 0.85)), 
+                url(https://i.ibb.co.com/ccbK3mSq/photobooth-io-gif-3.gif) no-repeat center center fixed;
+    background-size: cover;
+    color: #e0e0e0;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ===== HERO SECTION (Atas) ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4rem;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h4 {
+            color: #d4af37; /* Warna Emas */
+            font-weight: 500;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            line-height: 1.2;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text p {
+            color: #a0a0a0;
+            font-size: 1rem;
+            margin-bottom: 2.5rem;
+            max-width: 450px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: #d4af37; /* Tombol Emas */
+            color: #121418;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #f3cf55;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .hero-image img {
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* ===== BAGIAN UMUM ===== */
+        section {
+            padding: 6rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Garis bawah emas pada judul */
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #d4af37;
+            border-radius: 2px;
+        }
+
+        /* ===== ABOUT & SKILLS ===== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: #a0a0a0;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skills-list span {
+            background-color: #1c1f26;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: #d4af37;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.3s;
+        }
+
+        .skills-list span:hover {
+            background-color: #d4af37;
+            color: #121418;
+        }
+
+        /* ===== PROYEK ===== */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: #1c1f26;
+            padding: 2rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 175, 55, 0.4);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-card i {
+            font-size: 2rem;
+            color: #d4af37;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-card h3 {
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-bottom: 0.8rem;
+            font-weight: 500;
+        }
+
+        .project-card p {
+            color: #a0a0a0;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-card a {
+            color: #d4af37;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== KONTAK ===== */
+        .contact-info {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background-color: #1c1f26;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #e0e0e0;
+            transition: all 0.3s;
+        }
+
+        .contact-item:hover {
+            background-color: #d4af37;
+            color: #121418;
+        }
+
+        .contact-item i {
+            font-size: 1.2rem;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column-reverse;
+                justify-content: center;
+                text-align: center;
+                padding-top: 4rem;
+            }
+            .hero-text p {
+                margin: 0 auto 2rem auto;
+            }
+            .hero-image {
+                justify-content: center;
+            }
+            .hero-image img {
+                width: 250px;
+                height: 250px;
+            }
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            .section-title::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .section-title {
+                display: block;
+                text-align: center;
+            }
+            .contact-info {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HERO SECTION ===== -->
+    <div class="container">
+        <div class="hero">
+            <div class="hero-text">
+                <h4>HAI SEMUANYA</h4>
+                <h1>Saya Naufal</h1>
+                <p>Seorang Mahasiswa semester 1 yang baru masuk universitas tinggi, Saya ingin mengikuti comit karena ingin memperluas pengetahuan teknologi</p>
+                <a href="#proyek" class="btn">Lihat Karya Saya</a>
+            </div>
+            <div class="hero-image">
+                <!-- Ganti link ini dengan foto Anda -->
+                <img src="https://i.ibb.co.com/ccbK3mSq/photobooth-io-gif-3.gif" alt="Foto Profil">
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== TENTANG & KEAHLIAN ===== -->
+    <section id="tentang">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 class="section-title">Tentang Saya</h2>
+                    <p>Saya percaya bahwa desain yang baik adalah desain yang tidak perlu dijelaskan. Saya menggabungkan estetika modern dengan fungsionalitas untuk menciptakan pengalaman digital yang bermakna.</p>
+                    <p>Berpengalaman lebih dari 5 tahun, saya telah membantu berbagai klien mewujudkan ide mereka menjadi kenyataan.</p>
+                </div>
+                <div>
+                    <h2 class="section-title">Keahlian</h2>
+                    <div class="skills-list">
+                        <span>Jago main FF</span>
+                        <span>Pinter matematika</span>
+                        <span>Jago main AWM</span>
+                        <span>Jago ngoding juga</span>
+                        <span>Sigma</span>
+                        <span>Ganteng</span>
+                        <span>Keren</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROYEK ===== -->
+    <section id="proyek" style="background-color: #16181d;">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; display: block;">Pengalaman saya</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h3>E-Commerce Elegance</h3>
+                    <p>MASIH PROSES</p>
+                    <a href="#">Lihat Detail &rarr;</a>
+                </div>
+
+                <div class="project-card">
+                    <i class="fas fa-coffee"></i>
+                    <h3>Brand Identity Coffee</h3>
+                    <p>MASIH PROSES</p>
+                    <a href="#">Lihat Detail &rarr;</a>
+                </div>
+
+                <div class="project-card">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Aplikasi Kesehatan</h3>
+                    <p>MASIH PROSES</p>
+                    <a href="#">Lihat Detail &rarr;</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== KONTAK ===== -->
+    <section id="kontak">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; display: block;">CEK PROFIL GUA DIBAWAH</h2>
+            <div class="contact-info">
+                <a href="mailto:email@anda.com" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>email@anda.com</span>
+                </a>
+                <a href="#" class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/NAUFAL22323" class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.instagram.com/aqilabqory_/?utm_source=ig_web_button_share_sheet" class="contact-item">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Naufal Aqil Ak. Dibuat dengan penuh gaya.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
