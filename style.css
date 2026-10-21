@@ -1,0 +1,23 @@
+.warna-bergerak {
+    /* 1. Tentukan kombinasi warna gradasi yang diinginkan (Contoh: ungu, pink, biru, hijau) */
+    background: linear-gradient(-45deg, #4b134f, #c94b4b, #23a6d5, #23d5ab);
+    
+    /* 2. Perbesar ukuran background agar warnanya bisa digeser saat animasi berjalan */
+    background-size: 400% 400%;
+    
+    /* 3. Jalankan animasi bernama 'gerakanGlow', durasi 12 detik, halus (ease), dan berulang terus (infinite) */
+    animation: gerakanGlow 12s ease infinite;
+}
+
+/* 4. Logika pergeseran posisi warna latar belakang */
+@keyframes gerakanGlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
