@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio | Naufal</title>
+<link rel="stylesheet" href="style.css">
+
     <!-- Font modern: Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- Font Awesome untuk Ikon -->
@@ -13,6 +15,7 @@
     <h2 style="font-family: 'Playfair Display', serif; color: #d4af37; margin-bottom: 20px; letter-spacing: 2px;">Selamat Datang di Portofolio</h2>
     <button onclick="hidupkanMusik()" style="padding: 12px 30px; border: 1px solid #d4af37; background: transparent; color: #d4af37; cursor: pointer; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">
         Buka Portofolio Naufal <!DOCTYPE html>
+
         <html lang="en">
         <head>
             <meta charset="UTF-8">
@@ -58,7 +61,7 @@
     font-family: 'Poppins', sans-serif;
     /* Menggunakan GIF lokal sebagai background */
     background: linear-gradient(rgba(18, 20, 24, 0.8), rgba(18, 20, 24, 0.85)), 
-                url(background\ 1.video.gif) no-repeat center center fixed;
+                url(background\ kuning.gif) no-repeat center center fixed;
     background-size: cover;
     color: #e0e0e0;
     line-height: 1.7;
@@ -433,6 +436,23 @@
             </div>
         </div>
     </section>
+        <!-- ===== SECTION RATING ===== -->
+        <section id="rating-section" style="border-top: 1px solid rgba(255, 255, 255, 0.05); text-align: center;">
+            <h2 class="section-title">Beri Rating Portofolio</h2>
+            <p style="color: #a0a0a0; margin-bottom: 1.5rem;">Bagaimana penilaian Anda terhadap portofolio ini?</p>
+            
+            <!-- Kontainer Bintang -->
+            <div class="star-rating" style="font-size: 2.5rem; display: flex; justify-content: center; gap: 0.5rem; margin-bottom: 1rem;">
+                <i class="fa-regular fa-star" data-value="1" style="color: #666; cursor: pointer; transition: transform 0.2s, color 0.2s;"></i>
+                <i class="fa-regular fa-star" data-value="2" style="color: #666; cursor: pointer; transition: transform 0.2s, color 0.2s;"></i>
+                <i class="fa-regular fa-star" data-value="3" style="color: #666; cursor: pointer; transition: transform 0.2s, color 0.2s;"></i>
+                <i class="fa-regular fa-star" data-value="4" style="color: #666; cursor: pointer; transition: transform 0.2s, color 0.2s;"></i>
+                <i class="fa-regular fa-star" data-value="5" style="color: #666; cursor: pointer; transition: transform 0.2s, color 0.2s;"></i>
+            </div>
+            
+            <!-- Teks Status -->
+            <p id="rating-status" style="color: #d4af37; font-weight: 500; font-size: 1rem; min-height: 1.7rem;"></p>
+        </section>
 
     <!-- ===== FOOTER ===== -->
     <footer>
@@ -440,6 +460,6 @@
             <p>&copy; 2026 Naufal Aqil Ak. Dibuat dengan penuh gaya.</p>
         </div>
     </footer>
-
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,29 @@
+.hero-image img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    
+    /* Tambahkan 2 baris ini */
+    animation: mengambang 4s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+/* Tambahkan ke bagian paling bawah file style.css */
+@keyframes mengambang {
+    0% {
+        transform: translateY(0px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+    50% {
+        transform: translateY(-15px); /* Jarak naik ke atas */
+        border-color: rgba(212, 175, 55, 0.7); /* Efek kilau emas menguat saat naik */
+        box-shadow: 0 30px 50px rgba(212, 175, 55, 0.15); /* Bayangan emas halus di bawahnya */
+    }
+    100% {
+        transform: translateY(0px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+}
