@@ -27,3 +27,19 @@
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     }
 }
+body {
+    /* Ketik nama file gambar Anda */
+    background-image: url('background.jpg'); 
+    
+    /* Membuat gambar selalu berada di tengah */
+    background-position: center center; 
+    
+    /* Mencegah gambar berulang jika layar terlalu besar */
+    background-repeat: no-repeat; 
+    
+    /* Membuat gambar menempel saat di-scroll (opsional) */
+    background-attachment: fixed; 
+    
+    /* KUNCI UTAMA: Memaksa gambar menutupi seluruh area layar */
+    background-size: cover; 
+}
