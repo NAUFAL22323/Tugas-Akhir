@@ -43,3 +43,27 @@ body {
     /* KUNCI UTAMA: Memaksa gambar menutupi seluruh area layar */
     background-size: cover; 
 }
+body {
+    background-image: url('background-kuning.png'); 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #000;
+    
+    /* Tambahkan Kunci Flexbox ini agar semua konten otomatis ke tengah */
+    display: flex;
+    flex-direction: column;   /* Menyusun konten dari atas ke bawah */
+    justify-content: center;  /* Memposisikan konten di tengah secara vertikal (atas-bawah) */
+    align-items: center;      /* Memposisikan konten di tengah secara horizontal (kiri-kanan) */
+    text-align: center;       /* Membuat baris teks rata tengah */
+    min-height: 100vh;        /* Memastikan tinggi pembungkus searah tinggi layar penuh */
+    margin: 0;
+    padding: 20px;            /* Memberi jarak aman di kanan-kiri agar teks tidak mentok layar HP */
+}
+
+/* Merapikan susunan teks judul */
+h2, h1, .welcome-overlay { 
+    max-width: 90%;           /* Mencegah tulisan terlalu panjang menyentuh pinggir layar HP */
+    margin-bottom: 20px;      /* Memberi jarak antara tulisan dan tombol di bawahnya */
+}
