@@ -29,7 +29,7 @@
 }
 body {
     /* Ketik nama file gambar Anda */
-    background-image: url('background.jpg'); 
+    background-image: url('background-kuning.gif'); 
     
     /* Membuat gambar selalu berada di tengah */
     background-position: center center; 
