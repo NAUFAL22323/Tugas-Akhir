@@ -30,7 +30,7 @@
                         const clickedVal = this.getAttribute('data-value');
                         localStorage.setItem('portfolioRating', clickedVal);
                         kunciBintang(clickedVal);
-                        statusText.innerText = `Terima kasih atas penilaian ${clickedVal} bintang Anda!`;
+                        statusText.innerText = `MAKASIH BUAT YANG UDAH RATING ${clickedVal} KONTOL`;
                         
                         // Menonaktifkan event listener agar tidak bisa diubah lagi
                         hilangkanEventRating();
