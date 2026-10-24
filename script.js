@@ -7,7 +7,7 @@
             const savedRating = localStorage.getItem('portfolioRating');
             if (savedRating) {
                 kunciBintang(savedRating);
-                statusText.innerText = `MAKASIH BUAT YANG UDAH RATING ${savedRating} WEB GUEE!`;
+                statusText.innerText = `MAKASIH BUAT YANG UDAH RATING ${savedRating} WEB GUEE!!`;
             } else {
                 aktifkanFiturRating();
             }
@@ -30,7 +30,7 @@
                         const clickedVal = this.getAttribute('data-value');
                         localStorage.setItem('portfolioRating', clickedVal);
                         kunciBintang(clickedVal);
-                        statusText.innerText = `MAKASIH BUAT YANG UDAH RATING ${clickedVal} WEB GUA!`;
+                        statusText.innerText = `MAKASIH BUAT YANG UDAH RATING ${clickedVal} WEB GUE!!`;
                         
                         // Menonaktifkan event listener agar tidak bisa diubah lagi
                         hilangkanEventRating();
